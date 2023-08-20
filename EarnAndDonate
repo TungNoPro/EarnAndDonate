@@ -1,0 +1,63 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({
+    Name = "BaconBoss Hub | Earn And Donate",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "OrionTest"
+})
+
+local Tab = Window:MakeTab({
+    Name = "Main 🏠",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+    Name = "Teleport To Staff"
+})
+
+
+    
+    function Teleport(teleportPlace)
+            local player = game.Players.LocalPlayer
+            player.Character.HumanoidRootPart.CFrame = teleportPlace
+                
+    end
+
+   
+TabThree:AddDropdown({
+	Name = "Select Staff",
+	Default = "Staff 1",
+	Options = {"Staff 1", "Staff 2", "Staff 3", "Staff 4", "Staff 5", "Staff 6", "Staff 7", "Staff 8", "Staff 9", "Staff 10"},
+	Callback = function(Value)
+		getgenv().TPPlace = Value
+	end    
+})
+
+    TabThree:AddButton({
+            Name = "Teleport",
+            Callback = function(Value)
+                if getgenv().TPPlace == "Staff 1" then
+                    Teleport(game:GetService("Workspace").StaffModels[" "].Head.CFrame)
+                elseif getgenv().TPPlace == "Staff 2" then
+                    Teleport(game:GetService("Workspace").StaffModels[" "].Head.CFrame)
+                elseif getgenv().TPPlace == "Staff 3" then
+                    Teleport(game:GetService("Workspace").StaffModels[" "].Head.CFrame)
+                elseif getgenv().TPPlace == "Staff 4" then
+                    Teleportgame:GetService("Workspace").StaffModels[" "].Head.CFrame)
+                elseif getgenv().TPPlace == "Staff 5" then
+                    Teleport(game:GetService("Workspace").StaffModels[" "].Head.CFrame)
+elseif getgenv().TPPlace == "Staff 6" then
+                    Teleport(game:GetService("Workspace").StaffModels[" "].Head.CFrame)
+elseif getgenv().TPPlace == "Staff 7" then
+                    Teleport(game:GetService("Workspace").StaffModels[" "].Head.CFrame)
+elseif getgenv().TPPlace == "Staff 8" then
+                    Teleport(game:GetService("Workspace").StaffModels[" "].Head.CFrame)
+elseif getgenv().TPPlace == "Staff 9" then
+                    Teleport(game:GetService("Workspace").StaffModels[" "].Head.CFrame)
+elseif getgenv().TPPlace == "Staff 10" then
+                    Teleport(game:GetService("Workspace").StaffModels[" "].Head.CFrame)
+                end
+            end
+    })
+    
